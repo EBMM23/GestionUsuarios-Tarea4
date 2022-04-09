@@ -6,6 +6,7 @@ package Clases;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 //Clase con patron de diseño singleton, para limitar a una sola conexion a la BD
 public class Conexion {
@@ -16,10 +17,11 @@ public class Conexion {
     public static Connection getConexion() {
         if (conexion == null) {
             try {
-                //Obtencion de variables de entorno con las informaciones de conexion
-                String ruta = System.getenv("URL_DB_TAREA");
-                String usuario = System.getenv("USUARIO_DB_TAREA");
-                String clave = System.getenv("CLAVE_DB_TAREA");
+                //Obtencion de prodpiedades con las informaciones de conexion
+                ResourceBundle reader = ResourceBundle.getBundle("Clases.dbconfig");
+                String ruta = reader.getString("db.url");
+                String usuario = reader.getString("db.usuario");
+                String clave = reader.getString("db.clave");
                 
                 //Obtención de la conexion a la BD
                 conexion = DriverManager.getConnection(ruta, usuario, clave);
