@@ -139,7 +139,7 @@ public class ManejoUsuarios {
     //Método para obtener todos los registros de la tabls
     public  LinkedList<Usuario> obtenerUsuarios(){
         //Linked list donde guardaremos los usuarios
-        LinkedList<Usuario> listaClientes = new LinkedList<>();
+        LinkedList<Usuario> listaUsuarios = new LinkedList<>();
         
         //Query(Consulta) a realizar
         String query = "SELECT * FROM Clientes";
@@ -157,27 +157,27 @@ public class ManejoUsuarios {
                 //Bucle para guardar los resultados en la Linked List
                 while (rs.next()) {
                     //Creación de objeto de la  clase Usuario
-                    Usuario actualCliente = new Usuario();
+                    Usuario actualUsuario = new Usuario();
                     
                     //Obtención de los datos del usuario actual
-                    actualCliente.setUsuario(rs.getString("usuario"));
-                    actualCliente.setNombre(rs.getString("nombre"));
-                    actualCliente.setApellido(rs.getString("apellido"));
-                    actualCliente.setTelefono(rs.getString("telefono"));
-                    actualCliente.setCorreo(rs.getString("correo"));
-                    actualCliente.setContrasennia(rs.getString("contrasennia"));
+                    actualUsuario.setUsuario(rs.getString("usuario"));
+                    actualUsuario.setNombre(rs.getString("nombre"));
+                    actualUsuario.setApellido(rs.getString("apellido"));
+                    actualUsuario.setTelefono(rs.getString("telefono"));
+                    actualUsuario.setCorreo(rs.getString("correo"));
+                    actualUsuario.setContrasennia(rs.getString("contrasennia"));
                     
                     //Se añade el usuario actual a la Linked list
-                    listaClientes.add(actualCliente);
+                    listaUsuarios.add(actualUsuario);
                 }
             } else {
-                System.out.println("No hay ningun cliente registrado.");
+                System.out.println("No hay ningun usuario registrado.");
             }
         } catch (SQLException e) {
-            System.err.println("Error al obtener lista de clientes\n" + e);
+            System.err.println("Error al obtener lista de usuarios\n" + e);
         }
                 
         
-        return listaClientes;
+        return listaUsuarios;
     }
 }
