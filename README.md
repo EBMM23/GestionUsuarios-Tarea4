@@ -33,3 +33,13 @@ también.
 
 • Una vez actualizado o eliminados los cambios se muestran
 automáticamente en la pantalla principal.
+
+# Resultado de la solución
+## Ventana Login
+![A1-Lgon](https://user-images.githubusercontent.com/71516416/187484810-8bbf6006-2726-4d9d-b744-25a86057f403.png)
+## Ventana de registro
+![A2-Registro](https://user-images.githubusercontent.com/71516416/187484893-9f7de474-7334-408b-b090-fd53928c90d0.png)
+## Ventana principal
+![A3-Prinxi](https://user-images.githubusercontent.com/71516416/187484957-8e902c4e-5875-4021-9594-1e5b193b2cc9.png)
+## Ventana para actualizar usuario
+![A7-ActualizarB](https://user-images.githubusercontent.com/71516416/187485129-e68ec976-fb5f-45d5-8ad7-a76bc0ffa9b7.png)
