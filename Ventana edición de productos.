@@ -1,0 +1,5 @@
+private void mostrarVentanaGestionProductos() {
+    // ...
+
+    // Añadir un listener al TableView para detectar cuando se selecciona un producto
+    tablaProductos.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, new
