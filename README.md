@@ -1,5 +1,5 @@
-# GestionUsuarios-Tarea4
-Tarea#4 de la materia Programación I (ITLA)
+# GestionUsuarios y productos-proyecto final
+proyecto final de la materia Programación I (ITLA)
 
 # Mandato
 Crear un Login de usuarios donde se podrán ingresar con usuario y contraseña (al
