@@ -1,0 +1,25 @@
+private void mostrarVentanaGestionProductos() {
+    // Crear los campos de texto
+    TextField campoNombre = new TextField();
+    TextField campoMarca = new TextField();
+    TextField campoCategoria = new TextField();
+    TextField campoPrecio = new TextField();
+    TextField campoCantidad = new TextField();
+
+    // Crear el botón de guardar
+    Button botonGuardar = new Button("Guardar");
+    botonGuardar.setOnAction(e -> guardarProducto(campoNombre.getText(), campoMarca.getText(), campoCategoria.getText(), Double.parseDouble(campoPrecio.getText()), Integer.parseInt(campoCantidad.getText())));
+
+    // Crear el layout y añadir los campos y el botón
+    VBox layout = new VBox();
+    layout.getChildren().addAll(new Label("Nombre"), campoNombre, new Label("Marca"), campoMarca, new Label("Categoría"), campoCategoria, new Label("Precio"), campoPrecio, new Label("Cantidad disponible"), campoCantidad, botonGuardar);
+
+    // Crear la escena y mostrar la ventana
+    Stage ventana = new Stage();
+    ventana.setScene(new Scene(layout));
+    ventana.show();
+}
+
+private void guardarProducto(String nombre, String marca, String categoria, double precio, int cantidad) {
+    // TODO: Implementar la inserción del producto en la base de datos y actualizar la tabla de productos
+}
